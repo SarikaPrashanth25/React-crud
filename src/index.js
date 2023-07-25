@@ -4,10 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// CSS and JS files
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+
+// bootstrap icons css
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+// toastify css
+import "react-toastify/dist/ReactToastify.css";
+import AuthProvider from './Context/AuthContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </React.StrictMode>
 );
 
