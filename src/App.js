@@ -9,15 +9,20 @@ import Register from './component/Auth/Register'
 import Pnf from './component/Pnf'
 import PrivateRouter from './PrivateRoute/PrivateRouter'
 
+import { ToastContainer } from 'react-toastify'
+import Details from './component/Details'
+
 function App(props) {
     return (
         <BrowserRouter>
-                <Menu />  
+                <Menu /> 
+                <ToastContainer autoClose={4000} position={'top-right'} />
                 <Routes>
                     <Route element={<PrivateRouter/>}>
                        <Route path={`/`} element={<Home/>} />
                        <Route path={`/create`} element={<Create/>} />
                        <Route path={`/update/:id`} element={<Update/>} />
+                       <Route path={`/details/:userId`} element={<Details/>} />
                     </Route>
                     <Route path={`/login`} element={<Login/>} />
                     <Route path={`/register`} element={<Register/>} />

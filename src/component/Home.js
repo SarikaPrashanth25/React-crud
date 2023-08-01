@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState} from 'react'
+import axios from 'axios'  // default impory
+import { toast } from 'react-toastify' // { typed import }
+
+const URL = "https://dummyjson.com"
 
 function Home(props) {
+    const [users,setUsers] = useState([])
+
+    const getUsers = useCallback(() => {
+        const readUser = async () => {
+            /* 
+                fetch(`${URL}/users`, {
+                    method: "GET",
+                    headers: {"Content-Type": "application/json"}
+                })
+                .then(res => res.json())
+                .then(out => {})
+                .catch(err => {})
+            */
+        }
+    })
     return (
         <div className="container">
             <div className="row">
